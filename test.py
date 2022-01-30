@@ -1,14 +1,15 @@
+import readline
+
+
 print("Loading the file")
 f = open("test.txt")
 print(f)
 lines = f.readlines()
 print(lines)
 
-print(type(lines))
+sum_1 = 0
+for item in lines:
+    sum_1 = sum_1 + int(item)
+    print("The sum is:", sum_1)
 
-the_sum = 0
-for line in lines:
-    the_sum = the_sum + int(line)
-    print(the_sum)
-
-print(sum([int(x) for x in lines])) # prints the sum of numbers in lines
+print("The sum is also:", sum([int(x) for x in lines]))
